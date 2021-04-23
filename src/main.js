@@ -6,7 +6,7 @@ import Exchanger from "./exchanger.js";
 
 function buildPage(response){
   if (response){
-    $("#result").append(response);
+    $("#result").append(response.conversion_rates.USD);
   } else {
     $("#errors").text(`There was an error: ${response.message}`);
   }
