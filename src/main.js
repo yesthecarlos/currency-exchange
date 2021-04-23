@@ -10,7 +10,9 @@ function clear(){
 
 function buildPage(response){
   if (response){
-    $("#result").append(response.conversion_rates.USD);
+    let input = $("#dollarAmount").val();
+    let currency = $("#currency").val();
+    $("#result").append(input * response.conversion_rates.currency);
   } else {
     $("#errors").text(`There was an error: ${response.message}`);
   }
