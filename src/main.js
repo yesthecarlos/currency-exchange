@@ -4,6 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import Exchanger from "./exchanger.js";
 
+function clear(){
+  $("#result").empty();
+}
+
 function buildPage(response){
   if (response){
     $("#result").append(response.conversion_rates.USD);
@@ -15,6 +19,7 @@ function buildPage(response){
 $(document).ready(function() {
   $("#exchangeButton").click(function(event) {
     event.preventDefault();
+    clear();
     Exchanger.exchanger()
       .then(function(response){
         buildPage(response);
