@@ -8,30 +8,35 @@
     <div class="row">
       <h1>Currency Exchanger</h1>
     </div>
-    <form id="form-check">
     <div class="row">
       <div class="col">
-      <select class="form-control" id="currency">
-        <option>Dollar (U.S.)</option>
-        <option>Euro</option>
-        <option>Yen</option>
-        <option>Peso</option>
-      </select>
-      </div>
+        <form id="form-check">
+          <div class="form-group">
+            <label for="dollarAmount">Amount in Dollars (U.S.)</label>
+            <input id="dollarAmount" class="form-control" type="number">
+          </div>
+      </div>    
       <div class="col">
-      <select class="form-control" id="currency">
-        <option>Dollar (U.S.)</option>
-        <option>Euro</option>
-        <option>Yen</option>
-        <option>Peso</option>
-      </select>
+          <div class="form-group">
+            <label for="currency">Desired Currency</label>
+            <select class="form-control" id="currency">
+              <option>Dollar (U.S.)</option>
+              <option>Euro</option>
+              <option>Yen</option>
+              <option>Peso</option>
+            </select>
+          </div>
       </div>
     </div>
+    <div class="row">
+      <button type="submit" class="btn btn-success" id="exchangeButton">Exchange</button>
+      </form>
+    </div>
     <br><br>
-    <button type="submit" class="btn btn-success" id="exchangeButton">Exchange</button>
-    </form>
-    <div id="result"></div>
-    <div id="errors"></div>
+    <div class="row">
+      <div id="result"></div>
+      <div id="errors"></div>
+    </div>
     </div>
   </body>
 </html>
