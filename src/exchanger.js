@@ -7,9 +7,9 @@ export default class Exchanger {
         }
         // console.log(response.json())
         return response.json();
-        })
+      })
       .catch(function(error) {
         return error;
-      })
+      });
   }
 }

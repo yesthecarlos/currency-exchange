@@ -9,22 +9,23 @@ function clear(){
 }
 
 function currencyChoice(response) {
-  let converted = 0
-  if ($("#currency") === "USD"){
-    converted = response.conversion_rates.USD.val();
-  } else if ($("#currency") === "EUR") {
+  let converted;
+  if ($("#currency").val() === "USD"){
+    converted = response.conversion_rates.USD;
+  } else if ($("#currency").val() === "EUR") {
     converted = response.conversion_rates.EUR;
-  } else if ($("#currency") === "JPY") {
+  } else if ($("#currency").val() === "JPY") {
     converted = response.conversion_rates.JPY;
-  } else if ($("#currency") === "MXN") {
+  } else if ($("#currency").val() === "MXN") {
     converted = response.conversion_rates.MXN;
-    }
-    return converted;
   }
+  // console.log(converted)
+  return converted;
+}
 
 function buildPage(response, converted){
   if (response){
-    currencyChoice();
+    currencyChoice(converted);
     let input = $("#dollarAmount").val();
     $("#result").append(input * converted);
   } else {
@@ -34,11 +35,12 @@ function buildPage(response, converted){
 
 $(document).ready(function() {
   $("#exchangeButton").click(function(event) {
+    let converted = $("#currency");
     event.preventDefault();
     clear();
     Exchanger.exchanger()
       .then(function(response){
-        buildPage(response);
+        buildPage(response, converted);
       });
   });
 });
