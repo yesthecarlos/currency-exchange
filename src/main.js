@@ -39,6 +39,14 @@ async function setCurrencyMultiplier(response) {
     multiplier = response.conversion_rates.MXN;
     let result = input * multiplier;
     $("#result").append(result);
+  } else if ($("#currency").val() === "KRW") {
+    multiplier = response.conversion_rates.KRW;
+    let result = input * multiplier;
+    $("#result").append(result);
+  } else if ($("#currency").val() === "CAD") {
+    multiplier = response.conversion_rates.CAD;
+    let result = input * multiplier;
+    $("#result").append(result);
   }
   return multiplier;
   
