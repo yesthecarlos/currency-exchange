@@ -26,7 +26,7 @@ _This project demonstrates correct API usage and data parsing. The app allows th
 * _Type_ <code>$ git clone https://github.com/yesthecarlos/currency-exchanger.git</code> _and press Enter._
 * _Open the directory in VS Code or your preferred program._
 * _Visit https://www.exchangerate-api.com/ and input your email address and create an account to receive an API key._
-* _Place your API key in an <code>.env</code> file in the top level of the project directory._
+* _Store your API key in an <code>API_KEY</code> variable inside an <code>.env</code> file at the top level of the project directory._
 * _Run <code>$npm install</code> to install the required packages and dependencies._
 * _Run <code>$npm run build</code> to build the project._
 
