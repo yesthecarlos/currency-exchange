@@ -15,7 +15,7 @@
 
 ## Description
 
-_This project demonstrates correct API usage and data parsing. The app allows the user to input the amount of U.S. Dollars they'd like to convert and currency they'd like to convert it to. It returns the amount in the desired currency._
+_This project demonstrates correct API usage and data parsing. The app allows the user to input the amount of U.S. Dollars they'd like to convert and currency they'd like to convert it to. It returns the amount in the desired currency. It uses the API offered by ExchangeRate-API.com._
 
 ## Setup/Installation Instructions
 
